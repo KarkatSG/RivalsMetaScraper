@@ -10,6 +10,9 @@ if not SUPABASE_KEY:
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+# Leaderboard thresholds (tweak here to change filters globally)
+MIN_MATCHES_REQUIRED = 20
+
 def scrape_leaderboard(url_character_name: str, db_character_name: str):
     """
     Scrape the leaderboard for a specific character and update the Supabase database.
@@ -110,7 +113,7 @@ def scrape_leaderboard(url_character_name: str, db_character_name: str):
         # Filter out players who don't meet the thresholds
         filtered_players = [
             player for player in all_scraped_players
-            if player["matches"] >= 50 and player["score"] >= 4200 and player["winrate"] >= 50
+            if player["matches"] >= MIN_MATCHES_REQUIRED and player["score"] >= 4200 and player["winrate"] >= 50
         ]
 
         # Sort the filtered players by rank score in descending order
