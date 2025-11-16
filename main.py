@@ -151,6 +151,7 @@ def scrape_leaderboard(url_character_name: str, db_character_name: str):
 
 # List of characters to scrape
 characters = [
+    ("angela", "Angela"),
     ("captain-america", "Captain America"),
     ("doctor-strange", "Doctor Strange"),
     ("groot", "Groot"),
@@ -159,6 +160,8 @@ characters = [
     ("peni-parker", "Peni Parker"),
     ("thor", "Thor"),
     ("venom", "Venom"),
+    ("blade", "Blade"),
+    ("daredevil", "Daredevil"),
     ("black-panther", "Black Panther"),
     ("black-widow", "Black Widow"),
     ("hawkeye", "Hawkeye"),
@@ -181,6 +184,7 @@ characters = [
     ("wolverine", "Wolverine"),
     ("adam-warlock", "Adam Warlock"),
     ("cloak-dagger", "Cloak & Dagger"),
+    ("gambit", "Gambit"),
     ("invisible-woman", "Invisible Woman"),
     ("jeff-the-land-shark", "Jeff The Land Shark"),
     ("loki", "Loki"),
